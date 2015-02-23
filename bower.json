@@ -1,0 +1,11 @@
+{
+  "name": "CityPub",
+  "version": "1.0.0",
+  "dependencies": {
+    "lumx": "latest",
+    "angular-resource": "latest",
+    "angular-route": "latest",
+    "angular-translate": "latest"
+  },
+  "private": true
+}

@@ -1,0 +1,36 @@
+application: YOUR-APP-ID
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /_ah/spi/.*
+  script: server.myAppEndpoints
+
+- url: /libs
+  static_dir: client/libs
+
+- url: /img
+  static_dir: client/img
+
+- url: /common
+  static_dir: client/common
+
+- url: /front
+  static_dir: client/front
+  application_readable: true
+
+- url: /service.*
+  script: server.main.application
+
+- url: /.*
+  script: server.main.application
+
+libraries:
+- name: jinja2
+  version: latest
+- name: django
+  version: latest
+- name: endpoints
+  version: 1.0
